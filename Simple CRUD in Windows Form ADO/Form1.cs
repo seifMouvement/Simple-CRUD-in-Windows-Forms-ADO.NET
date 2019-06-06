@@ -21,36 +21,21 @@ namespace Simple_CRUD_in_Windows_Form_ADO
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            /*la base de donnée est configuré sur Microsoft SQL serveur
-             BDD est le nom de la BD
-             T4300 est le nom de serveur
-             integrated security=true parceque on est connecté avec le compte windows*/
-            con.ConnectionString = "initial catalog=BDD;data source=T4300; integrated security=true";
-            con.Open();
-            cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM CATEGORIE";
+            Donnees d = new Donnees();
+            d.connecter();
+          
+           d.cmd.Connection = d.con;
+            d.cmd.CommandText = "SELECT * FROM CATEGORIE";
             /*mettre le flux dans un datatable( datatable trouve dans une dataset) et dire à
              * notre datagridview ton datasource ca sera la datatable
              */
-
-            /*data table est systéme de fichier XML et la BD est un systéme de donnée relationnel.
-             pour transformer un flux SQL en data table on doit utiliser un adaptateur
-             DataAdapter*/
-
-            SqlDataAdapter da = new SqlDataAdapter();
-            /*on va utiliser le mode déconnecter dans on doit utiliser l'objet Dataset,
-             la dataset est indpendante de la source de donnée c'est pour cela qu'elle ne 
-             commence pas par SQL*/
-            DataSet ds = new DataSet();
-
-            da.SelectCommand = cmd;
-            /*on imaginer une BD à l'intérieure il y a une dataset et à l'intérieure il y 
+            d.da.SelectCommand = d.cmd;
+            /*on imagine une BD à l'intérieure il y a une dataset et à l'intérieure il y 
              * un data table*/
-            da.Fill(ds, "DTCATEGORIE");
+            d.da.Fill(d.ds, "DTCATEGORIE");
             /* la datatable DTCATEGORIE va remplir la datagridview */
-            dgvCATEGORIE.DataSource = ds.Tables["DTCATEGORIE"];
+            dgvCATEGORIE.DataSource = d.ds.Tables["DTCATEGORIE"];
+            d.deconnecter();
         }
     }
 }
