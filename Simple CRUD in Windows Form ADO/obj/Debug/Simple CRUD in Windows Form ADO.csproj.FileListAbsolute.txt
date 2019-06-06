@@ -7,3 +7,4 @@ C:\Users\Admin\Desktop\revision asp et c sharp\Simple CRUD in Windows Form ADO.N
 C:\Users\Admin\Desktop\revision asp et c sharp\Simple CRUD in Windows Form ADO.Net\Simple CRUD in Windows Form ADO\Simple CRUD in Windows Form ADO\obj\Debug\Simple CRUD in Windows Form ADO.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\revision asp et c sharp\Simple CRUD in Windows Form ADO.Net\Simple CRUD in Windows Form ADO\Simple CRUD in Windows Form ADO\obj\Debug\Simple CRUD in Windows Form ADO.exe
 C:\Users\Admin\Desktop\revision asp et c sharp\Simple CRUD in Windows Form ADO.Net\Simple CRUD in Windows Form ADO\Simple CRUD in Windows Form ADO\obj\Debug\Simple CRUD in Windows Form ADO.pdb
+C:\Users\Admin\Desktop\revision asp et c sharp\Simple CRUD in Windows Form ADO.Net\Simple CRUD in Windows Form ADO\Simple CRUD in Windows Form ADO\obj\Debug\Simple CRUD in Windows Form ADO.csprojAssemblyReference.cache

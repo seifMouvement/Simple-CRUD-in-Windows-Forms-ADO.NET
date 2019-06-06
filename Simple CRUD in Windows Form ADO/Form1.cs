@@ -18,10 +18,11 @@ namespace Simple_CRUD_in_Windows_Form_ADO
         {
             InitializeComponent();
         }
-
+        Donnees d = new Donnees();
+        manipulations m = new manipulations();
         private void Form1_Load(object sender, EventArgs e)
         {
-            Donnees d = new Donnees();
+            
            
             d.remplirGrid("CATEGORIE", dgvCATEGORIE);
           
@@ -36,9 +37,22 @@ namespace Simple_CRUD_in_Windows_Form_ADO
 
             /*il va remplir les champs du deuxiéme onglet avec la ligne séléctionné du premier
               onglet*/
-            txtNUMCAT.Text = dgvCATEGORIE.SelectedRows[0].Cells[0].Value.ToString();
-            txtNOMCAT.Text = dgvCATEGORIE.SelectedRows[0].Cells[1].Value.ToString();
+            /*  txtNUMCAT.Text = dgvCATEGORIE.SelectedRows[0].Cells[0].Value.ToString();
+              txtNOMCAT.Text = dgvCATEGORIE.SelectedRows[0].Cells[1].Value.ToString();*/
+            // on peut utiliser les noms des champs tels qu'ils sont dans la BD
 
+            txtNUMCAT.Text = dgvCATEGORIE.SelectedRows[0].Cells["NUMCAT"].Value.ToString();
+            txtNOMCAT.Text = dgvCATEGORIE.SelectedRows[0].Cells["NOMCAT"].Value.ToString(); 
+        }
+
+        private void btrNouveau_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnnouveau_Click(object sender, EventArgs e)
+        {
+            m.ViderForme(panel1);
         }
     }
 }

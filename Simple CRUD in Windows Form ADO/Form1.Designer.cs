@@ -135,6 +135,7 @@
             this.btrNouveau.TabIndex = 0;
             this.btrNouveau.Text = "Nouveau";
             this.btrNouveau.UseVisualStyleBackColor = false;
+            this.btrNouveau.Click += new System.EventHandler(this.btrNouveau_Click);
             // 
             // pnlAffichage
             // 
@@ -297,6 +298,7 @@
             this.btnnouveau.TabIndex = 0;
             this.btnnouveau.Text = "Nouveau";
             this.btnnouveau.UseVisualStyleBackColor = false;
+            this.btnnouveau.Click += new System.EventHandler(this.btnnouveau_Click);
             // 
             // Form1
             // 
