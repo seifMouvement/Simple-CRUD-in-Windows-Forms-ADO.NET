@@ -30,25 +30,38 @@
         {
             this.tbcCategorie = new System.Windows.Forms.TabControl();
             this.tbgRecherche = new System.Windows.Forms.TabPage();
-            this.tbgMiseAjour = new System.Windows.Forms.TabPage();
-            this.pnlRecherche = new System.Windows.Forms.Panel();
-            this.pnlAffichage = new System.Windows.Forms.Panel();
             this.pnrBoutton = new System.Windows.Forms.Panel();
-            this.dgvCATEGORIE = new System.Windows.Forms.DataGridView();
-            this.txrNUMCAT = new System.Windows.Forms.TextBox();
-            this.txrNOMCAT = new System.Windows.Forms.TextBox();
-            this.lbrNUMCAT = new System.Windows.Forms.Label();
-            this.lbrNOMCAT = new System.Windows.Forms.Label();
-            this.btrNouveau = new System.Windows.Forms.Button();
-            this.btrModifier = new System.Windows.Forms.Button();
-            this.btrSupprimer = new System.Windows.Forms.Button();
             this.btrQuitter = new System.Windows.Forms.Button();
+            this.btrSupprimer = new System.Windows.Forms.Button();
+            this.btrModifier = new System.Windows.Forms.Button();
+            this.btrNouveau = new System.Windows.Forms.Button();
+            this.pnlAffichage = new System.Windows.Forms.Panel();
+            this.dgvCATEGORIE = new System.Windows.Forms.DataGridView();
+            this.pnlRecherche = new System.Windows.Forms.Panel();
+            this.lbrNOMCAT = new System.Windows.Forms.Label();
+            this.lbrNUMCAT = new System.Windows.Forms.Label();
+            this.txrNOMCAT = new System.Windows.Forms.TextBox();
+            this.txrNUMCAT = new System.Windows.Forms.TextBox();
+            this.tbgMiseAjour = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNOMCAT = new System.Windows.Forms.Label();
+            this.lblNUMCAT = new System.Windows.Forms.Label();
+            this.txtNOMCAT = new System.Windows.Forms.TextBox();
+            this.txtNUMCAT = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnquitter = new System.Windows.Forms.Button();
+            this.btnsupprimer = new System.Windows.Forms.Button();
+            this.btnmodifier = new System.Windows.Forms.Button();
+            this.btnnouveau = new System.Windows.Forms.Button();
             this.tbcCategorie.SuspendLayout();
             this.tbgRecherche.SuspendLayout();
-            this.pnlRecherche.SuspendLayout();
-            this.pnlAffichage.SuspendLayout();
             this.pnrBoutton.SuspendLayout();
+            this.pnlAffichage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCATEGORIE)).BeginInit();
+            this.pnlRecherche.SuspendLayout();
+            this.tbgMiseAjour.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcCategorie
@@ -74,15 +87,70 @@
             this.tbgRecherche.Text = "Recherche";
             this.tbgRecherche.UseVisualStyleBackColor = true;
             // 
-            // tbgMiseAjour
+            // pnrBoutton
             // 
-            this.tbgMiseAjour.Location = new System.Drawing.Point(4, 22);
-            this.tbgMiseAjour.Name = "tbgMiseAjour";
-            this.tbgMiseAjour.Padding = new System.Windows.Forms.Padding(3);
-            this.tbgMiseAjour.Size = new System.Drawing.Size(741, 385);
-            this.tbgMiseAjour.TabIndex = 1;
-            this.tbgMiseAjour.Text = "Mise à jour";
-            this.tbgMiseAjour.UseVisualStyleBackColor = true;
+            this.pnrBoutton.Controls.Add(this.btrQuitter);
+            this.pnrBoutton.Controls.Add(this.btrSupprimer);
+            this.pnrBoutton.Controls.Add(this.btrModifier);
+            this.pnrBoutton.Controls.Add(this.btrNouveau);
+            this.pnrBoutton.Location = new System.Drawing.Point(26, 314);
+            this.pnrBoutton.Name = "pnrBoutton";
+            this.pnrBoutton.Size = new System.Drawing.Size(675, 55);
+            this.pnrBoutton.TabIndex = 3;
+            // 
+            // btrQuitter
+            // 
+            this.btrQuitter.Location = new System.Drawing.Point(484, 17);
+            this.btrQuitter.Name = "btrQuitter";
+            this.btrQuitter.Size = new System.Drawing.Size(75, 23);
+            this.btrQuitter.TabIndex = 3;
+            this.btrQuitter.Text = "Quitter";
+            this.btrQuitter.UseVisualStyleBackColor = true;
+            // 
+            // btrSupprimer
+            // 
+            this.btrSupprimer.Location = new System.Drawing.Point(341, 17);
+            this.btrSupprimer.Name = "btrSupprimer";
+            this.btrSupprimer.Size = new System.Drawing.Size(75, 23);
+            this.btrSupprimer.TabIndex = 2;
+            this.btrSupprimer.Text = "Supprimer";
+            this.btrSupprimer.UseVisualStyleBackColor = true;
+            // 
+            // btrModifier
+            // 
+            this.btrModifier.Location = new System.Drawing.Point(186, 17);
+            this.btrModifier.Name = "btrModifier";
+            this.btrModifier.Size = new System.Drawing.Size(75, 23);
+            this.btrModifier.TabIndex = 1;
+            this.btrModifier.Text = "Modifier";
+            this.btrModifier.UseVisualStyleBackColor = true;
+            this.btrModifier.Click += new System.EventHandler(this.btrModifier_Click);
+            // 
+            // btrNouveau
+            // 
+            this.btrNouveau.BackColor = System.Drawing.Color.Transparent;
+            this.btrNouveau.Location = new System.Drawing.Point(39, 17);
+            this.btrNouveau.Name = "btrNouveau";
+            this.btrNouveau.Size = new System.Drawing.Size(75, 23);
+            this.btrNouveau.TabIndex = 0;
+            this.btrNouveau.Text = "Nouveau";
+            this.btrNouveau.UseVisualStyleBackColor = false;
+            // 
+            // pnlAffichage
+            // 
+            this.pnlAffichage.Controls.Add(this.dgvCATEGORIE);
+            this.pnlAffichage.Location = new System.Drawing.Point(26, 131);
+            this.pnlAffichage.Name = "pnlAffichage";
+            this.pnlAffichage.Size = new System.Drawing.Size(675, 177);
+            this.pnlAffichage.TabIndex = 2;
+            // 
+            // dgvCATEGORIE
+            // 
+            this.dgvCATEGORIE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCATEGORIE.Location = new System.Drawing.Point(15, 12);
+            this.dgvCATEGORIE.Name = "dgvCATEGORIE";
+            this.dgvCATEGORIE.Size = new System.Drawing.Size(647, 150);
+            this.dgvCATEGORIE.TabIndex = 0;
             // 
             // pnlRecherche
             // 
@@ -95,46 +163,14 @@
             this.pnlRecherche.Size = new System.Drawing.Size(675, 100);
             this.pnlRecherche.TabIndex = 1;
             // 
-            // pnlAffichage
+            // lbrNOMCAT
             // 
-            this.pnlAffichage.Controls.Add(this.dgvCATEGORIE);
-            this.pnlAffichage.Location = new System.Drawing.Point(26, 131);
-            this.pnlAffichage.Name = "pnlAffichage";
-            this.pnlAffichage.Size = new System.Drawing.Size(675, 177);
-            this.pnlAffichage.TabIndex = 2;
-            // 
-            // pnrBoutton
-            // 
-            this.pnrBoutton.Controls.Add(this.btrQuitter);
-            this.pnrBoutton.Controls.Add(this.btrSupprimer);
-            this.pnrBoutton.Controls.Add(this.btrModifier);
-            this.pnrBoutton.Controls.Add(this.btrNouveau);
-            this.pnrBoutton.Location = new System.Drawing.Point(26, 314);
-            this.pnrBoutton.Name = "pnrBoutton";
-            this.pnrBoutton.Size = new System.Drawing.Size(675, 55);
-            this.pnrBoutton.TabIndex = 3;
-            // 
-            // dgvCATEGORIE
-            // 
-            this.dgvCATEGORIE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCATEGORIE.Location = new System.Drawing.Point(15, 12);
-            this.dgvCATEGORIE.Name = "dgvCATEGORIE";
-            this.dgvCATEGORIE.Size = new System.Drawing.Size(647, 150);
-            this.dgvCATEGORIE.TabIndex = 0;
-            // 
-            // txrNUMCAT
-            // 
-            this.txrNUMCAT.Location = new System.Drawing.Point(201, 15);
-            this.txrNUMCAT.Name = "txrNUMCAT";
-            this.txrNUMCAT.Size = new System.Drawing.Size(215, 20);
-            this.txrNUMCAT.TabIndex = 0;
-            // 
-            // txrNOMCAT
-            // 
-            this.txrNOMCAT.Location = new System.Drawing.Point(201, 62);
-            this.txrNOMCAT.Name = "txrNOMCAT";
-            this.txrNOMCAT.Size = new System.Drawing.Size(215, 20);
-            this.txrNOMCAT.TabIndex = 1;
+            this.lbrNOMCAT.AutoSize = true;
+            this.lbrNOMCAT.Location = new System.Drawing.Point(36, 70);
+            this.lbrNOMCAT.Name = "lbrNOMCAT";
+            this.lbrNOMCAT.Size = new System.Drawing.Size(82, 13);
+            this.lbrNOMCAT.TabIndex = 3;
+            this.lbrNOMCAT.Text = "Nom catégorie :";
             // 
             // lbrNUMCAT
             // 
@@ -145,51 +181,122 @@
             this.lbrNUMCAT.TabIndex = 2;
             this.lbrNUMCAT.Text = "Numéro :";
             // 
-            // lbrNOMCAT
+            // txrNOMCAT
             // 
-            this.lbrNOMCAT.AutoSize = true;
-            this.lbrNOMCAT.Location = new System.Drawing.Point(36, 70);
-            this.lbrNOMCAT.Name = "lbrNOMCAT";
-            this.lbrNOMCAT.Size = new System.Drawing.Size(82, 13);
-            this.lbrNOMCAT.TabIndex = 3;
-            this.lbrNOMCAT.Text = "Nom catégorie :";
+            this.txrNOMCAT.Location = new System.Drawing.Point(201, 62);
+            this.txrNOMCAT.Name = "txrNOMCAT";
+            this.txrNOMCAT.Size = new System.Drawing.Size(215, 20);
+            this.txrNOMCAT.TabIndex = 1;
             // 
-            // btrNouveau
+            // txrNUMCAT
             // 
-            this.btrNouveau.BackColor = System.Drawing.Color.Transparent;
-            this.btrNouveau.Location = new System.Drawing.Point(39, 17);
-            this.btrNouveau.Name = "btrNouveau";
-            this.btrNouveau.Size = new System.Drawing.Size(75, 23);
-            this.btrNouveau.TabIndex = 0;
-            this.btrNouveau.Text = "Nouveau";
-            this.btrNouveau.UseVisualStyleBackColor = false;
+            this.txrNUMCAT.Location = new System.Drawing.Point(201, 15);
+            this.txrNUMCAT.Name = "txrNUMCAT";
+            this.txrNUMCAT.Size = new System.Drawing.Size(215, 20);
+            this.txrNUMCAT.TabIndex = 0;
             // 
-            // btrModifier
+            // tbgMiseAjour
             // 
-            this.btrModifier.Location = new System.Drawing.Point(186, 17);
-            this.btrModifier.Name = "btrModifier";
-            this.btrModifier.Size = new System.Drawing.Size(75, 23);
-            this.btrModifier.TabIndex = 1;
-            this.btrModifier.Text = "Modifier";
-            this.btrModifier.UseVisualStyleBackColor = true;
+            this.tbgMiseAjour.Controls.Add(this.panel2);
+            this.tbgMiseAjour.Controls.Add(this.panel1);
+            this.tbgMiseAjour.Location = new System.Drawing.Point(4, 22);
+            this.tbgMiseAjour.Name = "tbgMiseAjour";
+            this.tbgMiseAjour.Padding = new System.Windows.Forms.Padding(3);
+            this.tbgMiseAjour.Size = new System.Drawing.Size(741, 385);
+            this.tbgMiseAjour.TabIndex = 1;
+            this.tbgMiseAjour.Text = "Mise à jour";
+            this.tbgMiseAjour.UseVisualStyleBackColor = true;
             // 
-            // btrSupprimer
+            // panel1
             // 
-            this.btrSupprimer.Location = new System.Drawing.Point(341, 17);
-            this.btrSupprimer.Name = "btrSupprimer";
-            this.btrSupprimer.Size = new System.Drawing.Size(75, 23);
-            this.btrSupprimer.TabIndex = 2;
-            this.btrSupprimer.Text = "Supprimer";
-            this.btrSupprimer.UseVisualStyleBackColor = true;
+            this.panel1.Controls.Add(this.lblNOMCAT);
+            this.panel1.Controls.Add(this.lblNUMCAT);
+            this.panel1.Controls.Add(this.txtNOMCAT);
+            this.panel1.Controls.Add(this.txtNUMCAT);
+            this.panel1.Location = new System.Drawing.Point(23, 23);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(675, 100);
+            this.panel1.TabIndex = 2;
             // 
-            // btrQuitter
+            // lblNOMCAT
             // 
-            this.btrQuitter.Location = new System.Drawing.Point(484, 17);
-            this.btrQuitter.Name = "btrQuitter";
-            this.btrQuitter.Size = new System.Drawing.Size(75, 23);
-            this.btrQuitter.TabIndex = 3;
-            this.btrQuitter.Text = "Quitter";
-            this.btrQuitter.UseVisualStyleBackColor = true;
+            this.lblNOMCAT.AutoSize = true;
+            this.lblNOMCAT.Location = new System.Drawing.Point(36, 70);
+            this.lblNOMCAT.Name = "lblNOMCAT";
+            this.lblNOMCAT.Size = new System.Drawing.Size(82, 13);
+            this.lblNOMCAT.TabIndex = 3;
+            this.lblNOMCAT.Text = "Nom catégorie :";
+            // 
+            // lblNUMCAT
+            // 
+            this.lblNUMCAT.AutoSize = true;
+            this.lblNUMCAT.Location = new System.Drawing.Point(36, 22);
+            this.lblNUMCAT.Name = "lblNUMCAT";
+            this.lblNUMCAT.Size = new System.Drawing.Size(50, 13);
+            this.lblNUMCAT.TabIndex = 2;
+            this.lblNUMCAT.Text = "Numéro :";
+            // 
+            // txtNOMCAT
+            // 
+            this.txtNOMCAT.Location = new System.Drawing.Point(201, 62);
+            this.txtNOMCAT.Name = "txtNOMCAT";
+            this.txtNOMCAT.Size = new System.Drawing.Size(215, 20);
+            this.txtNOMCAT.TabIndex = 1;
+            // 
+            // txtNUMCAT
+            // 
+            this.txtNUMCAT.Location = new System.Drawing.Point(201, 15);
+            this.txtNUMCAT.Name = "txtNUMCAT";
+            this.txtNUMCAT.Size = new System.Drawing.Size(215, 20);
+            this.txtNUMCAT.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnquitter);
+            this.panel2.Controls.Add(this.btnsupprimer);
+            this.panel2.Controls.Add(this.btnmodifier);
+            this.panel2.Controls.Add(this.btnnouveau);
+            this.panel2.Location = new System.Drawing.Point(23, 218);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(675, 55);
+            this.panel2.TabIndex = 4;
+            // 
+            // btnquitter
+            // 
+            this.btnquitter.Location = new System.Drawing.Point(484, 17);
+            this.btnquitter.Name = "btnquitter";
+            this.btnquitter.Size = new System.Drawing.Size(75, 23);
+            this.btnquitter.TabIndex = 3;
+            this.btnquitter.Text = "Quitter";
+            this.btnquitter.UseVisualStyleBackColor = true;
+            // 
+            // btnsupprimer
+            // 
+            this.btnsupprimer.Location = new System.Drawing.Point(341, 17);
+            this.btnsupprimer.Name = "btnsupprimer";
+            this.btnsupprimer.Size = new System.Drawing.Size(75, 23);
+            this.btnsupprimer.TabIndex = 2;
+            this.btnsupprimer.Text = "Supprimer";
+            this.btnsupprimer.UseVisualStyleBackColor = true;
+            // 
+            // btnmodifier
+            // 
+            this.btnmodifier.Location = new System.Drawing.Point(186, 17);
+            this.btnmodifier.Name = "btnmodifier";
+            this.btnmodifier.Size = new System.Drawing.Size(75, 23);
+            this.btnmodifier.TabIndex = 1;
+            this.btnmodifier.Text = "Modifier";
+            this.btnmodifier.UseVisualStyleBackColor = true;
+            // 
+            // btnnouveau
+            // 
+            this.btnnouveau.BackColor = System.Drawing.Color.Transparent;
+            this.btnnouveau.Location = new System.Drawing.Point(39, 17);
+            this.btnnouveau.Name = "btnnouveau";
+            this.btnnouveau.Size = new System.Drawing.Size(75, 23);
+            this.btnnouveau.TabIndex = 0;
+            this.btnnouveau.Text = "Nouveau";
+            this.btnnouveau.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -202,11 +309,15 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tbcCategorie.ResumeLayout(false);
             this.tbgRecherche.ResumeLayout(false);
+            this.pnrBoutton.ResumeLayout(false);
+            this.pnlAffichage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCATEGORIE)).EndInit();
             this.pnlRecherche.ResumeLayout(false);
             this.pnlRecherche.PerformLayout();
-            this.pnlAffichage.ResumeLayout(false);
-            this.pnrBoutton.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCATEGORIE)).EndInit();
+            this.tbgMiseAjour.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -228,6 +339,16 @@
         private System.Windows.Forms.Button btrSupprimer;
         private System.Windows.Forms.Button btrModifier;
         private System.Windows.Forms.Button btrNouveau;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnquitter;
+        private System.Windows.Forms.Button btnsupprimer;
+        private System.Windows.Forms.Button btnmodifier;
+        private System.Windows.Forms.Button btnnouveau;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblNOMCAT;
+        private System.Windows.Forms.Label lblNUMCAT;
+        private System.Windows.Forms.TextBox txtNOMCAT;
+        private System.Windows.Forms.TextBox txtNUMCAT;
     }
 }
 

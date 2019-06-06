@@ -46,11 +46,11 @@ namespace Simple_CRUD_in_Windows_Form_ADO
                 con.Close();
             }
         }
-        /*optimisation du code pour quìl fonctionne avec n'importe quel table et 
+        /*optimisation du code pour qu'il fonctionne avec n'importe quel table et 
          n'importe quelle gridview*/
         public void remplirGrid(string table , DataGridView dg)
         {
-            connecter();
+            connecter(); 
             cmd.Connection = con;
             cmd.CommandText = "SELECT * FROM "+table;
             /*mettre le flux dans un datatable( datatable trouve dans une dataset) et dire à
