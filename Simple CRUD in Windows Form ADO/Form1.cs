@@ -22,20 +22,9 @@ namespace Simple_CRUD_in_Windows_Form_ADO
         private void Form1_Load(object sender, EventArgs e)
         {
             Donnees d = new Donnees();
-            d.connecter();
+            d.remplirGrid("CATEGORIE", dgvCATEGORIE);
           
-           d.cmd.Connection = d.con;
-            d.cmd.CommandText = "SELECT * FROM CATEGORIE";
-            /*mettre le flux dans un datatable( datatable trouve dans une dataset) et dire à
-             * notre datagridview ton datasource ca sera la datatable
-             */
-            d.da.SelectCommand = d.cmd;
-            /*on imagine une BD à l'intérieure il y a une dataset et à l'intérieure il y 
-             * un data table*/
-            d.da.Fill(d.ds, "DTCATEGORIE");
-            /* la datatable DTCATEGORIE va remplir la datagridview */
-            dgvCATEGORIE.DataSource = d.ds.Tables["DTCATEGORIE"];
-            d.deconnecter();
+          
         }
     }
 }

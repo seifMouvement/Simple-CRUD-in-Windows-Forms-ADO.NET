@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Simple_CRUD_in_Windows_Form_ADO
 {
@@ -44,6 +45,24 @@ namespace Simple_CRUD_in_Windows_Form_ADO
             {
                 con.Close();
             }
+        }
+        /*optimisation du code pour quìl fonctionne avec n'importe quel table et 
+         n'importe quelle gridview*/
+        public void remplirGrid(string table , DataGridView dg)
+        {
+            connecter();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM "+table;
+            /*mettre le flux dans un datatable( datatable trouve dans une dataset) et dire à
+             * notre datagridview ton datasource ca sera la datatable
+             */
+            da.SelectCommand = cmd;
+            /*on imagine une BD à l'intérieure il y a une dataset et à l'intérieure il y 
+             * un data table*/
+            da.Fill(ds, "DT"+table);
+            /* la datatable DTCATEGORIE va remplir la datagridview */
+            dg.DataSource = ds.Tables["DTCATEGORIE"];
+            deconnecter();
         }
     }
 }
