@@ -47,12 +47,25 @@ namespace Simple_CRUD_in_Windows_Form_ADO
 
         private void btrNouveau_Click(object sender, EventArgs e)
         {
-           
+            tbcCategorie.SelectedTab = tbgMiseAjour;
+            m.ViderForme(panel1);
         }
 
         private void btnnouveau_Click(object sender, EventArgs e)
         {
             m.ViderForme(panel1);
+        }
+
+        private void btnajouter_Click(object sender, EventArgs e)
+        {
+            /* insérer dans la BD*/
+            d.connecter();
+            d.cmd.Connection = d.con;
+            d.cmd.CommandText="INSERT INTO CATEGORIE (NUMCAT,NOMCAT) VALUES ("+int.Parse(txtNUMCAT.Text)+
+                ",'"+txtNOMCAT.Text+"')";
+            d.cmd.ExecuteNonQuery();
+            d.deconnecter();
+            MessageBox.Show("Ajout éffectué avec succes");
         }
     }
 }

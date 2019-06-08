@@ -43,16 +43,17 @@
             this.txrNOMCAT = new System.Windows.Forms.TextBox();
             this.txrNUMCAT = new System.Windows.Forms.TextBox();
             this.tbgMiseAjour = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblNOMCAT = new System.Windows.Forms.Label();
-            this.lblNUMCAT = new System.Windows.Forms.Label();
-            this.txtNOMCAT = new System.Windows.Forms.TextBox();
-            this.txtNUMCAT = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnquitter = new System.Windows.Forms.Button();
             this.btnsupprimer = new System.Windows.Forms.Button();
             this.btnmodifier = new System.Windows.Forms.Button();
             this.btnnouveau = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNOMCAT = new System.Windows.Forms.Label();
+            this.lblNUMCAT = new System.Windows.Forms.Label();
+            this.txtNOMCAT = new System.Windows.Forms.TextBox();
+            this.txtNUMCAT = new System.Windows.Forms.TextBox();
+            this.btnajouter = new System.Windows.Forms.Button();
             this.tbcCategorie.SuspendLayout();
             this.tbgRecherche.SuspendLayout();
             this.pnrBoutton.SuspendLayout();
@@ -60,8 +61,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCATEGORIE)).BeginInit();
             this.pnlRecherche.SuspendLayout();
             this.tbgMiseAjour.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcCategorie
@@ -208,6 +209,56 @@
             this.tbgMiseAjour.Text = "Mise à jour";
             this.tbgMiseAjour.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnajouter);
+            this.panel2.Controls.Add(this.btnquitter);
+            this.panel2.Controls.Add(this.btnsupprimer);
+            this.panel2.Controls.Add(this.btnmodifier);
+            this.panel2.Controls.Add(this.btnnouveau);
+            this.panel2.Location = new System.Drawing.Point(23, 218);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(675, 55);
+            this.panel2.TabIndex = 4;
+            // 
+            // btnquitter
+            // 
+            this.btnquitter.Location = new System.Drawing.Point(552, 16);
+            this.btnquitter.Name = "btnquitter";
+            this.btnquitter.Size = new System.Drawing.Size(75, 23);
+            this.btnquitter.TabIndex = 3;
+            this.btnquitter.Text = "Quitter";
+            this.btnquitter.UseVisualStyleBackColor = true;
+            // 
+            // btnsupprimer
+            // 
+            this.btnsupprimer.Location = new System.Drawing.Point(341, 17);
+            this.btnsupprimer.Name = "btnsupprimer";
+            this.btnsupprimer.Size = new System.Drawing.Size(75, 23);
+            this.btnsupprimer.TabIndex = 2;
+            this.btnsupprimer.Text = "Supprimer";
+            this.btnsupprimer.UseVisualStyleBackColor = true;
+            // 
+            // btnmodifier
+            // 
+            this.btnmodifier.Location = new System.Drawing.Point(186, 17);
+            this.btnmodifier.Name = "btnmodifier";
+            this.btnmodifier.Size = new System.Drawing.Size(75, 23);
+            this.btnmodifier.TabIndex = 1;
+            this.btnmodifier.Text = "Modifier";
+            this.btnmodifier.UseVisualStyleBackColor = true;
+            // 
+            // btnnouveau
+            // 
+            this.btnnouveau.BackColor = System.Drawing.Color.Transparent;
+            this.btnnouveau.Location = new System.Drawing.Point(39, 17);
+            this.btnnouveau.Name = "btnnouveau";
+            this.btnnouveau.Size = new System.Drawing.Size(75, 23);
+            this.btnnouveau.TabIndex = 0;
+            this.btnnouveau.Text = "Nouveau";
+            this.btnnouveau.UseVisualStyleBackColor = false;
+            this.btnnouveau.Click += new System.EventHandler(this.btnnouveau_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.lblNOMCAT);
@@ -251,54 +302,15 @@
             this.txtNUMCAT.Size = new System.Drawing.Size(215, 20);
             this.txtNUMCAT.TabIndex = 0;
             // 
-            // panel2
+            // btnajouter
             // 
-            this.panel2.Controls.Add(this.btnquitter);
-            this.panel2.Controls.Add(this.btnsupprimer);
-            this.panel2.Controls.Add(this.btnmodifier);
-            this.panel2.Controls.Add(this.btnnouveau);
-            this.panel2.Location = new System.Drawing.Point(23, 218);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(675, 55);
-            this.panel2.TabIndex = 4;
-            // 
-            // btnquitter
-            // 
-            this.btnquitter.Location = new System.Drawing.Point(484, 17);
-            this.btnquitter.Name = "btnquitter";
-            this.btnquitter.Size = new System.Drawing.Size(75, 23);
-            this.btnquitter.TabIndex = 3;
-            this.btnquitter.Text = "Quitter";
-            this.btnquitter.UseVisualStyleBackColor = true;
-            // 
-            // btnsupprimer
-            // 
-            this.btnsupprimer.Location = new System.Drawing.Point(341, 17);
-            this.btnsupprimer.Name = "btnsupprimer";
-            this.btnsupprimer.Size = new System.Drawing.Size(75, 23);
-            this.btnsupprimer.TabIndex = 2;
-            this.btnsupprimer.Text = "Supprimer";
-            this.btnsupprimer.UseVisualStyleBackColor = true;
-            // 
-            // btnmodifier
-            // 
-            this.btnmodifier.Location = new System.Drawing.Point(186, 17);
-            this.btnmodifier.Name = "btnmodifier";
-            this.btnmodifier.Size = new System.Drawing.Size(75, 23);
-            this.btnmodifier.TabIndex = 1;
-            this.btnmodifier.Text = "Modifier";
-            this.btnmodifier.UseVisualStyleBackColor = true;
-            // 
-            // btnnouveau
-            // 
-            this.btnnouveau.BackColor = System.Drawing.Color.Transparent;
-            this.btnnouveau.Location = new System.Drawing.Point(39, 17);
-            this.btnnouveau.Name = "btnnouveau";
-            this.btnnouveau.Size = new System.Drawing.Size(75, 23);
-            this.btnnouveau.TabIndex = 0;
-            this.btnnouveau.Text = "Nouveau";
-            this.btnnouveau.UseVisualStyleBackColor = false;
-            this.btnnouveau.Click += new System.EventHandler(this.btnnouveau_Click);
+            this.btnajouter.Location = new System.Drawing.Point(443, 17);
+            this.btnajouter.Name = "btnajouter";
+            this.btnajouter.Size = new System.Drawing.Size(75, 23);
+            this.btnajouter.TabIndex = 4;
+            this.btnajouter.Text = "Ajouter";
+            this.btnajouter.UseVisualStyleBackColor = true;
+            this.btnajouter.Click += new System.EventHandler(this.btnajouter_Click);
             // 
             // Form1
             // 
@@ -317,9 +329,9 @@
             this.pnlRecherche.ResumeLayout(false);
             this.pnlRecherche.PerformLayout();
             this.tbgMiseAjour.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -351,6 +363,7 @@
         private System.Windows.Forms.Label lblNUMCAT;
         private System.Windows.Forms.TextBox txtNOMCAT;
         private System.Windows.Forms.TextBox txtNUMCAT;
+        private System.Windows.Forms.Button btnajouter;
     }
 }
 
