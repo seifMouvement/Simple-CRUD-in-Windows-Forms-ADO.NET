@@ -90,5 +90,33 @@ namespace Simple_CRUD_in_Windows_Form_ADO
             // pour mettre à jour la gridview
             d.remplirGrid("CATEGORIE", dgvCATEGORIE);
         }
+
+        private void btnsupprimer_Click(object sender, EventArgs e)
+        { /* dans la if on va prendre le numcat déjà séléctionné dans la datagridview*/
+            if (d.nbrelignes("NUMCAT", "CATEGORIE", int.Parse(dgvCATEGORIE.SelectedRows[0].Cells["NUMCAT"].Value.ToString())) > 0)
+            {
+                d.cmd.CommandText = "DELETE FROM CATEGORIE WHERE NUMCAT= " + int.Parse(txtNUMCAT.Text);
+
+                d.cmd.ExecuteNonQuery();
+                d.deconnecter();
+                MessageBox.Show("Suppression éffectué avec succes");
+            }
+            // pour mettre à jour la gridview
+            d.remplirGrid("CATEGORIE", dgvCATEGORIE);
+
+        }
+
+        private void btrSupprimer_Click(object sender, EventArgs e)
+        {
+            if (d.nbrelignes("NUMCAT", "CATEGORIE", int.Parse(dgvCATEGORIE.SelectedRows[0].Cells["NUMCAT"].Value.ToString())) > 0)
+            {
+                d.cmd.CommandText = "DELETE FROM CATEGORIE WHERE NUMCAT= " + int.Parse(dgvCATEGORIE.SelectedRows[0].Cells["NUMCAT"].Value.ToString());
+
+                d.cmd.ExecuteNonQuery();
+                d.deconnecter();
+                MessageBox.Show("Suppression éffectué avec succes");
+            }
+            d.remplirGrid("CATEGORIE", dgvCATEGORIE);
+        }
     }
 }

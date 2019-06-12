@@ -116,6 +116,7 @@
             this.btrSupprimer.TabIndex = 2;
             this.btrSupprimer.Text = "Supprimer";
             this.btrSupprimer.UseVisualStyleBackColor = true;
+            this.btrSupprimer.Click += new System.EventHandler(this.btrSupprimer_Click);
             // 
             // btrModifier
             // 
@@ -248,6 +249,7 @@
             this.btnsupprimer.TabIndex = 2;
             this.btnsupprimer.Text = "Supprimer";
             this.btnsupprimer.UseVisualStyleBackColor = true;
+            this.btnsupprimer.Click += new System.EventHandler(this.btnsupprimer_Click);
             // 
             // btnmodifier
             // 
