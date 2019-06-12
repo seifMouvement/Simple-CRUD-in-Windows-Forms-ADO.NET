@@ -22,7 +22,7 @@ namespace Simple_CRUD_in_Windows_Form_ADO
         manipulations m = new manipulations();
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            /* pour remplir la datagridview*/
            
             d.remplirGrid("CATEGORIE", dgvCATEGORIE);
           
@@ -70,7 +70,25 @@ namespace Simple_CRUD_in_Windows_Form_ADO
                 d.deconnecter();
                 MessageBox.Show("Ajout éffectué avec succes");
             }
+           // pour mettre à jour la gridview
+            d.remplirGrid("CATEGORIE", dgvCATEGORIE);
 
+        }
+
+        private void btnmodifier_Click(object sender, EventArgs e)
+        {
+            /* dans la if on va prendre le numcat déjà séléctionné dans la datagridview*/
+            if (d.nbrelignes("NUMCAT", "CATEGORIE", int.Parse(dgvCATEGORIE.SelectedRows[0].Cells["NUMCAT"].Value.ToString())) > 0)
+            {
+                d.cmd.CommandText = "UPDATE CATEGORIE SET NUMCAT= " + int.Parse(txtNUMCAT.Text) + " ,NOMCAT='"
+                    + txtNOMCAT.Text + "'WHERE NUMCAT="+ int.Parse(dgvCATEGORIE.SelectedRows[0].Cells["NUMCAT"].Value.ToString());
+                    
+                d.cmd.ExecuteNonQuery();
+                d.deconnecter();
+                MessageBox.Show("Modification éffectué avec succes");
+            }
+            // pour mettre à jour la gridview
+            d.remplirGrid("CATEGORIE", dgvCATEGORIE);
         }
     }
 }

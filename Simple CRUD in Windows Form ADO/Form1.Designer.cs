@@ -44,6 +44,7 @@
             this.txrNUMCAT = new System.Windows.Forms.TextBox();
             this.tbgMiseAjour = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnajouter = new System.Windows.Forms.Button();
             this.btnquitter = new System.Windows.Forms.Button();
             this.btnsupprimer = new System.Windows.Forms.Button();
             this.btnmodifier = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.lblNUMCAT = new System.Windows.Forms.Label();
             this.txtNOMCAT = new System.Windows.Forms.TextBox();
             this.txtNUMCAT = new System.Windows.Forms.TextBox();
-            this.btnajouter = new System.Windows.Forms.Button();
             this.tbcCategorie.SuspendLayout();
             this.tbgRecherche.SuspendLayout();
             this.pnrBoutton.SuspendLayout();
@@ -221,6 +221,16 @@
             this.panel2.Size = new System.Drawing.Size(675, 55);
             this.panel2.TabIndex = 4;
             // 
+            // btnajouter
+            // 
+            this.btnajouter.Location = new System.Drawing.Point(443, 17);
+            this.btnajouter.Name = "btnajouter";
+            this.btnajouter.Size = new System.Drawing.Size(75, 23);
+            this.btnajouter.TabIndex = 4;
+            this.btnajouter.Text = "Ajouter";
+            this.btnajouter.UseVisualStyleBackColor = true;
+            this.btnajouter.Click += new System.EventHandler(this.btnajouter_Click);
+            // 
             // btnquitter
             // 
             this.btnquitter.Location = new System.Drawing.Point(552, 16);
@@ -247,6 +257,7 @@
             this.btnmodifier.TabIndex = 1;
             this.btnmodifier.Text = "Modifier";
             this.btnmodifier.UseVisualStyleBackColor = true;
+            this.btnmodifier.Click += new System.EventHandler(this.btnmodifier_Click);
             // 
             // btnnouveau
             // 
@@ -301,16 +312,6 @@
             this.txtNUMCAT.Name = "txtNUMCAT";
             this.txtNUMCAT.Size = new System.Drawing.Size(215, 20);
             this.txtNUMCAT.TabIndex = 0;
-            // 
-            // btnajouter
-            // 
-            this.btnajouter.Location = new System.Drawing.Point(443, 17);
-            this.btnajouter.Name = "btnajouter";
-            this.btnajouter.Size = new System.Drawing.Size(75, 23);
-            this.btnajouter.TabIndex = 4;
-            this.btnajouter.Text = "Ajouter";
-            this.btnajouter.UseVisualStyleBackColor = true;
-            this.btnajouter.Click += new System.EventHandler(this.btnajouter_Click);
             // 
             // Form1
             // 

@@ -57,6 +57,12 @@ namespace Simple_CRUD_in_Windows_Form_ADO
              * notre datagridview ton datasource ca sera la datatable
              */
             da.SelectCommand = cmd;
+            /*on va tester si la datatable existe on la nettoie si non on la creer
+             pour éviter d'avoir des doublons au moment de la modification */
+             if(ds.Tables["DTCATEGORIE"]!=null)
+            { 
+            ds.Tables["DTCATEGORIE"].Clear();
+            }
             /*on imagine une BD à l'intérieure il y a une dataset et à l'intérieure il y 
              * un data table*/
             da.Fill(ds, "DT"+table);
@@ -76,7 +82,7 @@ namespace Simple_CRUD_in_Windows_Form_ADO
              si le nombre obtenur par la requet SQL est superieur à 0 il ne vas pas faire l'insertion
              car il existe deja un enregistrement avec dans la BD avec ce numéro de categorie*/
             
-            cmd.CommandText = "SELECT COUNT (*) FROM" + table + "WHERE" + champ + "=" + valeur;
+            cmd.CommandText = "SELECT COUNT (*) FROM " + table + " WHERE " + champ + " = " + valeur;
             int cpt = int.Parse(cmd.ExecuteScalar().ToString());
             return cpt;
             
