@@ -64,5 +64,22 @@ namespace Simple_CRUD_in_Windows_Form_ADO
             dg.DataSource = ds.Tables["DTCATEGORIE"];
             deconnecter();
         }
+        /*une methode qui rentre le nombre d'existance d'un enregistrement dans la BD,
+         on va l'utiliser dans l'ajout, supression et modification*/
+        public int nbrelignes(string champ, string table, int valeur)
+        {
+            
+            connecter();
+            cmd.Connection = con;
+            /*on va gérer les doublons, il va lancer une requet SELECT qui compte le nombre de ligne
+             ayant le numéro de categorie est egale à la valeur saisie dans le champ numéro.
+             si le nombre obtenur par la requet SQL est superieur à 0 il ne vas pas faire l'insertion
+             car il existe deja un enregistrement avec dans la BD avec ce numéro de categorie*/
+            
+            cmd.CommandText = "SELECT COUNT (*) FROM" + table + "WHERE" + champ + "=" + valeur;
+            int cpt = int.Parse(cmd.ExecuteScalar().ToString());
+            return cpt;
+            
+        }
     }
 }
