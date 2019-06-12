@@ -118,5 +118,15 @@ namespace Simple_CRUD_in_Windows_Form_ADO
             }
             d.remplirGrid("CATEGORIE", dgvCATEGORIE);
         }
+
+        private void btrQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnquitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

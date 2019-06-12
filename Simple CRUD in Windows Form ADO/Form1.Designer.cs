@@ -107,6 +107,7 @@
             this.btrQuitter.TabIndex = 3;
             this.btrQuitter.Text = "Quitter";
             this.btrQuitter.UseVisualStyleBackColor = true;
+            this.btrQuitter.Click += new System.EventHandler(this.btrQuitter_Click);
             // 
             // btrSupprimer
             // 
@@ -240,6 +241,7 @@
             this.btnquitter.TabIndex = 3;
             this.btnquitter.Text = "Quitter";
             this.btnquitter.UseVisualStyleBackColor = true;
+            this.btnquitter.Click += new System.EventHandler(this.btnquitter_Click);
             // 
             // btnsupprimer
             // 
